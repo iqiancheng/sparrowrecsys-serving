@@ -1,2 +1,2 @@
 # sparrowrecsys-serving
-sparrowrecsys tensorflow serving. 麻雀推荐系统tf serving
+sparrowrecsys tensorflow model serving. 麻雀推荐系统 tf serving
