@@ -1,0 +1,14 @@
+version: '2'
+services:
+    tf-serving: # tensorflow serving
+      container_name: serving
+      ports:
+        - '8501:8501'
+      volumes:
+        - './modeldata/neuralcf:/models/recmodel'
+        - /etc/localtime:/etc/localtime
+      environment:
+        - TZ=Asia/Shanghai
+        - MODEL_NAME=recmodel
+      image: 'emacski/tensorflow-serving' # for macOS M1 chip
+      #image: 'tensorflow/serving'
